@@ -1,0 +1,25 @@
+{% extends 'Customer Page.html' %}
+{% block body %}
+<form method="POST" >
+    {% csrf_token %}
+    <table class="customers">
+        <tr>
+                <th>Card NO</th> <td><input type="number" name="t1" id="" ></td></tr>
+               <tr> <th>PIN</th><td><input type="text" name="t2" id=""></td></tr>
+               <tr> <th>CVV</th><td><input type="text" name="t3" id=""></td></tr>
+                <tr><th>DATE</th><td><input type="date" name="t4" id=""></td></tr>
+               <tr> <th>DOB</th><td><input type="date" name="t5" id=""></td></tr>
+                
+        
+           
+            
+            
+            
+            
+           
+          <tr>  <td><input type="submit" value="Submit" name="b1"></td>
+        </tr>
+     
+    </table>
+    </form>
+    {% endblock %}

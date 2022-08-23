@@ -1,0 +1,62 @@
+{% extends 'Common Page.html' %}
+
+
+{% block body %}
+<div class="input-info">
+		
+										
+									</div>
+									<div class="form-body form-body-info">
+										<form data-toggle="validator"  method="post">
+                                        {% csrf_token %}
+											<div class="form-group valid-form">
+												<input type="text" class="form-control" id="inputName" name="cname" placeholder="Name" required="" pattern="[a-zA-Z ]+">
+												<input type="text" class="form-control" id="inputName" name="address" placeholder="Address" required="">
+												<input type="text" class="form-control" id="inputName" name="pincode" placeholder="Pincode" required="" pattern="[6][0-9]{5}">
+											</div>
+											<div class="form-group">
+												<div class="radio">
+													<label>
+													  <input type="radio" name="gender" value="Male" required="">
+													  Male
+													</label>
+												</div>
+												<div class="radio">
+													<label>
+													<input type="radio" name="gender" value="Female" required="">
+													Female
+													</label>
+												</div>
+											</div>
+											<input type="text" class="form-control" id="inputName" name="age" placeholder="Age" required="" pattern="[0-9]{2}">
+											<input type="text" class="form-control" id="inputName" name="district" placeholder="District" required="" pattern="[a-zA-Z ]+">
+											<input type="text" class="form-control" id="inputName" name="location" placeholder="Location" required="" pattern="[a-zA-Z ]+">
+											<div class="form-group has-feedback">
+												<input type="email" class="form-control" name="Email" placeholder="Email" data-error="That email address is invalid" required="">
+												<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+												<span class="help-block with-errors">Please enter a valid email address</span>
+											</div>
+											<input type="text" class="form-control" id="inputName" name="mobile" placeholder="Mobile" required="" pattern="[6789][0-9]{9}">
+											
+											<div class="form-group">
+											  <input type="password" data-toggle="validator" data-minlength="6" class="form-control" id="inputPassword" name="Password" placeholder="Password" required="">
+											  <span class="help-block">Minimum of 6 characters</span>
+											</div>
+											
+											<div class="form-group">
+												<div class="checkbox">
+													<label>
+														<input type="checkbox" id="terms" data-error="Before you wreck yourself" required="">
+														I have read and accept terms of use.
+													</label>
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+											<div class="form-group">
+												<button type="submit" name="submit" class="btn btn-primary disabled">Submit</button>
+												<br>
+												<a style="color: yellow;" href="/" >GO HOME</a>
+											</div>
+										</form>
+										</div>
+										{% endblock %}
